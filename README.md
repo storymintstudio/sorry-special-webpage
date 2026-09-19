@@ -7,8 +7,7 @@ Sorry, Wrapped turns a simple apology into an interactive, scroll-based experien
 ## Live Page
 
 ## View the live page
-
-Replace https://your-live-page-url.com with your deployed website URL from GitHub Pages, Vercel, Netlify, or another hosting service.
+https://storymintstudio.github.io/sorry-special-webpage/
 
 ## About
 
