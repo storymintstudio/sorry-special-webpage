@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sorry, Wrapped</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg style="display:none">
+  <symbol id="ic-cup" viewBox="0 0 24 24"><path d="M4 8h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Z"/><path d="M17 9h1.5a2.5 2.5 0 0 1 0 5H17"/></symbol>
+  <symbol id="ic-umbrella" viewBox="0 0 24 24"><path d="M12 3C7 3 3.5 6.8 3 11h18C20.5 6.8 17 3 12 3Z"/><path d="M12 11v8a2 2 0 0 1-3.5 1.3"/></symbol>
+  <symbol id="ic-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></symbol>
+  <symbol id="ic-note" viewBox="0 0 24 24"><path d="M9 18V6l9-2v12"/><circle cx="7" cy="18" r="2.2"/><circle cx="16" cy="16" r="2.2"/></symbol>
+  <symbol id="ic-home" viewBox="0 0 24 24"><path d="M4 11 12 4l8 7"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></symbol>
+  <symbol id="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 3v2.4M12 18.6V21M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M3 12h2.4M18.6 12H21M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/></symbol>
+  <symbol id="ic-heart" viewBox="0 0 24 24"><path d="M12 20.5S3.5 15 3.5 9a5 5 0 0 1 8.5-3.6A5 5 0 0 1 20.5 9c0 6-8.5 11.5-8.5 11.5Z"/></symbol>
+</svg>
+
+<div class="dots" id="dots"></div>
+<div class="scroller" id="scroller">
+
+  <section id="cover">
+    <span class="section-decor" aria-hidden="true">&hearts;</span>
+    <svg class="heart" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.5"><use href="#ic-heart"/></svg>
+    <div class="envelope-wrap">
+      <div class="envelope">
+        <div class="stamp mono"> Sorry Sorry </div>
+        <div class="stamp b mono"> LOVIEE DOVIEE </div>
+        <div class="env-label"> FOR YOU </div>
+        <div class="env-sub"> FROM YOUR BETTER HALF · special delivery</div>
+        <div class="ribbon" id="ribbon"><div class="drag-pill">← drag to open →</div></div>
+      </div>
+      <div class="env-hint">drag the ribbon sideways to unwrap</div>
+    </div>
+    <div id="coverReveal">
+      <h1>I got it <em>wrong!</em></h1>
+      <p class="dash-sub">let me say it properly, this time</p>
+      <p class="lede" style="margin:0 auto 4px;">Not a text, not a "sorry lol" a whole page, because you deserve more than three words typed in a hurry</p>
+      <button class="cta-btn" id="openBtn">Open it with me <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
+    <div class="scroll-hint"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>scroll</div>
+  </section>
+
+  <section id="what">
+    <span class="section-decor" aria-hidden="true">01</span>
+    <span class="kicker">chapter 1</span>
+    <h2 class="reveal">What I actually <em>did</em></h2>
+    <p class="dash-sub reveal">no excuses, just the truth</p>
+    <p class="lede reveal">I said something I didn't mean to defend, when what you needed was for me to just listen</p>
+    <p class="lede reveal">This part isn't written to be forgiven quickly.. It's written so you know I've actually sat with it</p>
+  </section>
+
+  <section id="miss">
+    <span class="section-decor" aria-hidden="true">02</span>
+    <span class="kicker">chapter 2</span>
+    <h2 class="reveal">The little things I <em>miss</em></h2>
+    <p class="dash-sub reveal">the ordinary ones that were ours</p>
+    <div class="tiles">
+      <div class="tile accent" data-note="You always let me finish your leftover fries.">
+        <svg class="icon"><use href="#ic-cup"/></svg>
+        <p class="tile-label mono">tiny cafe</p>
+        <div class="tile-note">"You always let me finish your fries"</div>
+      </div>
+      <div class="tile" data-note="We shared one umbrella and still got soaked laughing.">
+        <svg class="heartmark" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.5"><use href="#ic-heart"/></svg>
+        <svg class="icon"><use href="#ic-umbrella"/></svg>
+        <p class="tile-label mono">rainy night</p>
+        <div class="tile-note">"We shared one umbrella, still got soaked"</div>
+      </div>
+      <div class="tile" data-note="I still have every single 2am voice note saved.">
+        <svg class="icon"><use href="#ic-moon"/></svg>
+        <p class="tile-label mono">2 a.m.</p>
+        <div class="tile-note">"I still have every voice note saved"</div>
+      </div>
+      <div class="tile" data-note="The song that made every drive feel like a movie.">
+        <svg class="icon"><use href="#ic-note"/></svg>
+        <p class="tile-label mono">our song</p>
+        <div class="tile-note">"Made every drive feel like a movie"</div>
+      </div>
+      <div class="tile accent" data-note="Your side of the couch is still exactly your side.">
+        <svg class="heartmark" viewBox="0 0 24 24" fill="none" stroke="var(--paper)" stroke-width="1.5"><use href="#ic-heart"/></svg>
+        <svg class="icon"><use href="#ic-home"/></svg>
+        <p class="tile-label mono">our place</p>
+        <div class="tile-note">"Your side of the couch, still yours."</div>
+      </div>
+      <div class="tile" data-note="Sunday mornings just feel quieter without you.">
+        <svg class="icon"><use href="#ic-sun"/></svg>
+        <p class="tile-label mono">sunset</p>
+        <div class="tile-note">"Sundays feel quieter without you."</div>
+      </div>
+    </div>
+    <div class="tap-hint">tap a card to read the note</div>
+  </section>
+
+  <section id="numbers">
+    <span class="section-decor" aria-hidden="true">03</span>
+    <span class="kicker">chapter 3</span>
+    <h2 class="reveal">The numbers only <em>we</em> know</h2>
+    <p class="dash-sub reveal">love-o-matic 24</p>
+    <div class="pull-box">
+      <div class="pull-tab" id="pullTab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="pullArrow"><path d="M12 5v14M5 12l7 7 7-7"/></svg>pull to reveal</div>
+      <div class="pull-hint">drag the tab downward</div>
+      <div class="stat-grid" id="statGrid">
+        <div class="stat"><b data-count="730">0</b><small>days of choosing each other</small></div>
+        <div class="stat"><b data-count="1284">0</b><small>late-night calls</small></div>
+        <div class="stat"><b data-count="6">0</b><small>cities we've missed each other in</small></div>
+        <div class="stat"><b data-count="1">0</b><small>apology I should've made sooner</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="promise">
+    <span class="section-decor" aria-hidden="true">04</span>
+    <span class="kicker">chapter 4</span>
+    <h2 class="reveal">What I'm actually <em>promising</em></h2>
+    <div class="note reveal">Not "I'll do better" but I'll ask before I assume, I'll say it when it's hard and I won't let three days of silence happen again.</div>
+  </section>
+
+  <section id="ask">
+    <span class="section-decor" aria-hidden="true">&hearts;</span>
+    <span class="kicker">last page</span>
+    <h2 class="reveal">Can we talk ? properly <em>in person</em>?</h2>
+    <p class="lede reveal" style="margin:0 auto;">No pressure to reply right away I just wanted you to know I meant every page of this.</p>
+    <div class="cta-row reveal">
+      <button class="cta-btn" id="talkBtn">Yes, I LOVED THIS </button>
+      <button class="btn-ghost" id="laterBtn">Not yet, but thank you</button>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  const sections = document.querySelectorAll('section');
+  const dotsWrap = document.getElementById('dots');
+  sections.forEach((_, i) => { const d=document.createElement('div'); d.className='dot'+(i===0?' active':''); dotsWrap.appendChild(d); });
+  const dots = document.querySelectorAll('.dot');
+  const scroller = document.getElementById('scroller');
+  const navIO = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ const idx=Array.from(sections).indexOf(e.target); dots.forEach((d,i)=>d.classList.toggle('active',i===idx)); } }); }, {root:scroller, threshold:0.6});
+  sections.forEach(s=>navIO.observe(s));
+
+  const revealIO = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); }); }, {root:scroller, threshold:0.25});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{ el.style.transitionDelay=(i%6)*60+'ms'; revealIO.observe(el); });
+
+  function countUp(el){
+    const target=parseInt(el.dataset.count,10); const dur=1000; const start=performance.now();
+    function tick(now){ const p=Math.min(1,(now-start)/dur); const eased=1-Math.pow(1-p,3); el.textContent=Math.round(target*eased).toLocaleString(); if(p<1) requestAnimationFrame(tick); }
+    requestAnimationFrame(tick);
+  }
+
+  // drag-to-unwrap ribbon
+  const ribbon = document.getElementById('ribbon');
+  const coverReveal = document.getElementById('coverReveal');
+  let ribbonOpened = false, dragStartX = null;
+  ribbon.addEventListener('pointerdown', e=>{ ribbon.setPointerCapture(e.pointerId); if(!ribbonOpened) dragStartX = e.clientX; });
+  ribbon.addEventListener('pointermove', e=>{
+    if(ribbonOpened || dragStartX===null || !e.buttons) return;
+    const dx = e.clientX - dragStartX;
+    ribbon.style.transform = `translate(calc(-50% + ${dx*0.3}px),-50%)`;
+    if(Math.abs(dx) > 70) openRibbon();
+  });
+  function endDrag(){ if(!ribbonOpened) ribbon.style.transform='translate(-50%,-50%)'; dragStartX=null; }
+  ribbon.addEventListener('pointerup', endDrag);
+  ribbon.addEventListener('pointercancel', endDrag);
+  function openRibbon(){
+    ribbonOpened = true;
+    ribbon.style.transition='transform .5s ease, opacity .5s ease';
+    ribbon.style.transform='translate(calc(-50% + 260px),-50%)';
+    ribbon.style.opacity='0';
+    coverReveal.classList.add('shown');
+  }
+  document.getElementById('openBtn').addEventListener('click', ()=> sections[1].scrollIntoView({behavior:'smooth'}));
+
+  // pull tab
+  const pullTab = document.getElementById('pullTab');
+  const statGrid = document.getElementById('statGrid');
+  const pullArrow = document.getElementById('pullArrow');
+  let pulled = false, pullStartY = null;
+  pullTab.addEventListener('pointerdown', e=>{ pullTab.setPointerCapture(e.pointerId); pullStartY=e.clientY; });
+  pullTab.addEventListener('pointermove', e=>{
+    if(pulled || pullStartY===null || !e.buttons) return;
+    const dy = e.clientY - pullStartY;
+    pullArrow.style.transform = `translateY(${Math.min(dy*0.4,14)}px)`;
+    if(dy > 40) revealStats();
+  });
+  pullTab.addEventListener('pointerup', ()=>{ pullStartY=null; if(!pulled) pullArrow.style.transform='none'; });
+  function revealStats(){
+    if(pulled) return; pulled = true;
+    statGrid.classList.add('shown');
+    pullTab.style.opacity='.5'; pullTab.style.pointerEvents='none';
+    pullTab.querySelector('svg').style.display='none';
+    pullTab.textContent = '✓ revealed';
+    document.querySelectorAll('[data-count]').forEach(countUp);
+  }
+
+  // tiles tap to open note
+  document.querySelectorAll('.tile').forEach(t=>{
+    t.addEventListener('click', ()=> t.classList.toggle('open'));
+  });
+
+  document.getElementById('talkBtn').addEventListener('click', function(){ this.textContent="Message sent"; this.disabled=true; });
+  document.getElementById('laterBtn').addEventListener('click', function(){ this.textContent="Okay — take your time"; this.disabled=true; });
+</script>
+
+</body>
+</html>
